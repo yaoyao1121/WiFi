@@ -1,0 +1,32 @@
+/* pages/wifi/wifi.wxss */
+.error,.success{
+  margin-top: 200rpx;
+  padding:0 20rpx;
+  width:100%;
+  display:flex;
+  box-sizing:border-box;
+}
+/* .info{ width: 100%;margin: 50rpx;color: green}
+.info text{display:inline-block;}
+.info input{display:inline-block;vertical-align: middle;padding-left:20rpx;font-size:32rpx;} */
+.error text{margin-left: 15rpx;font-size: 40rpx;color: red;}
+.success text{margin-left: 15rpx;font-size: 40rpx;color: green;}
+.button_fh{width: 50%; margin-top: 60rpx;}
+.info{width: 100%;height: 90rpx;border-radius: 12rpx;margin-top:30rpx;position:relative;line-height:90rpx;font-size:32rpx;color:#B6B6B6;display: flex;border:2rpx solid #979797;}
+.info text{height:100%;text-align:center;width:200rpx;}
+.info input{height:100%;flex:3;font-size:32rpx;}
+.info .place{color:#B6B6B6;font-size:40rpx;}
+.login-btn , .login-btn-use{height: 88rpx;line-height: 88rpx;border-radius: 8rpx;
+  color: #fff;font-size:32rpx;text-align: center;margin-top:60rpx;}
+.login-btn{background: #5BA8FF;}
+.login-btn-use{background: #F5A623;}
+.mt50{margin-top:100rpx;}
+.pt30{padding:30rpx 0;}
+.prg_box{width:100vw;height:100vh;position:absolute;top:0;background:rgba(0,0,0,0.3);}
+.progress_box{position: absolute;width:110px;height: 110px;  display: flex;  align-items: center;
+  justify-content: center;top:0;left:0;right:0;bottom:0;margin:auto;padding:20rpx;        
+  background:#fff;border-radius:8rpx;}
+.progress_bg{position: absolute;width:110px;height: 110px; }
+.progress_canvas{ width:110px;height: 110px; } 
+.progress_text{ position: absolute; display: flex;  align-items: center;justify-content: center}
+.progress_info{   font-size: 24rpx;letter-spacing: 2rpx} 

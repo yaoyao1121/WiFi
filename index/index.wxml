@@ -1,0 +1,44 @@
+<!--pages/set_network/set_network.wxml-->
+<view wx:if="{{startError}}">
+  <view class='error'>
+    <view><icon type="warn" size="30" /></view>
+    <text>{{startError}}</text>
+  </view>
+</view>
+
+<view wx:if="{{endError}}">
+  <view class='success'>
+    <view><icon type="success" size="30" /></view>
+    <text>{{endError}}</text>
+  </view>
+</view>
+
+<view style='padding:0 40rpx;' class='mt50' hidden="{{!wifiOk}}">
+  <view class='info'>
+    <text>wifi帐号:</text>
+    <input type="text" bindinput="getssid" placeholder="必填" value="{{ssid}}"/>
+  </view>
+  <view class='info'>
+    <text>wifi密码:</text>
+    <input type="text" bindinput="getpass"  placeholder="非必填" value="{{pass}}"/>
+  </view>
+  <!-- <view class="{{ssid == ''?'login-btn':'login-btn-use'}}" catchtap="{{wifiFlag ? 'conWifibtn' : '' }} ">连接WiFi</view> -->
+  <view class="{{ssid ? 'login-btn-use' : 'login-btn'}}" catchtap="{{wifiFlag ? 'conWifibtn' : 'preNet'}}">连接WiFi</view>
+</view>
+
+<view style='padding:0 40rpx;' class='mt50' hidden="{{wifiOk}}">
+  <view class='pt30'>wifi账号： <text>{{ssid}}</text> </view>
+  <view class="login-btn" catchtap="{{netFlag ? 'startNet' : 'preNet' }}">开始配网</view>
+</view>
+<!-- 配网提示框 -->
+<view class="prg_box" hidden='{{netFlag}}'>
+     <view class='progress_box'>
+        <canvas class="progress_bg"   canvas-id="canvasProgressbg">  </canvas> 
+        <canvas class="progress_canvas"   canvas-id="canvasProgress">  </canvas> 
+        <view class="progress_text">
+            <text class='progress_info'> {{progress_txt}}</text>
+        </view>     
+    </view>
+</view>
+
+
